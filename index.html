@@ -8,6 +8,31 @@
     <title>Tic Tac Toe</title>
 </head>
 <body>
-    
+    <dialog id="add-players">
+        <form id="form">
+            <div class="form-header">
+                <h1>Add Players</h1>
+            </div>
+            <label for="player1">Player 1 Name</label >
+            <input type="text" id="player1" minlength="1" maxlength="10" required>
+            <label for="player2">Player 2 Name</label >
+            <input type="text" id="player2" minlength="1" maxlength="10" required>
+            <input type="submit" form="form" id="player-submit" name="player-submit" value="Submit Players">
+            </div>
+        </form>
+    </dialog>
+    <div class="game">
+        <div class="title">
+            <div class="restart"><button class="restart-game">Restart Game</button></div>
+            <h1 class="title-text">Tic-Tac-Toe</h1>
+            <div class="theme"><button class="theme-button">Dark Mode</button></div>
+        </div>
+        <div class="fullGame">
+            <div class="left-side">X is Player 1</div>
+            <div class="gameSpace"></div>
+            <div class="right-side"><h3>O is Player 2</h3></div>
+        </div>
+    </div>
+    <div class="footer"><h1>Copyright © 2024 Damon Thomas</h1></div>
 </body>
 </html>
