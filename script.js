@@ -186,6 +186,7 @@ function ScreenController() {
     const themeButton = document.querySelector(".theme-button")
     const restartButton = document.querySelector(".restart-game")
     const body = document.querySelector("body")
+    const form = document.querySelector("#form")
     let player1 = ""
     let player2 = ""
     
@@ -206,6 +207,7 @@ function ScreenController() {
         addPlayerstoBoard(findPlayer1.value, findPlayer2.value)
         leftSidePlayer.textContent = `X IS ${findPlayer1.value.toUpperCase()}`
         rightSidePlayer.textContent = `O IS ${findPlayer2.value.toUpperCase()}`
+        form.reset()
         dialog.close()
     })
 
@@ -318,9 +320,13 @@ function ScreenController() {
         } 
     }
 
+    function fullRestart() {
+        resetGame()
+        dialog.showModal()
+    }
     gameDiv.addEventListener("click", gameClickHandler)
     themeButton.addEventListener("click", themeChanger)
-    restartButton.addEventListener("click", resetGame)
+    restartButton.addEventListener("click", fullRestart)
     
     updateScreen()
 
